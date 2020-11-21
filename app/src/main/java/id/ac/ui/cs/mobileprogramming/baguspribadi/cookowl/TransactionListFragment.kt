@@ -1,17 +1,13 @@
 package id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Adapter.RecipeListAdapter
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Adapter.TransactionListAdapter
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Transaction.TransactionViewModel
-import kotlinx.android.synthetic.main.recipe_list_fragment.view.*
 import kotlinx.android.synthetic.main.transaction_list_fragment.view.*
 
 class TransactionListFragment : Fragment() {

@@ -14,12 +14,10 @@ import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.Recipe
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.RecipeViewModel
 import kotlinx.android.synthetic.main.recipe_add_fragment.*
 import kotlinx.android.synthetic.main.recipe_add_fragment.view.*
-import kotlinx.android.synthetic.main.recipe_detail_fragment.view.*
 import kotlinx.android.synthetic.main.recipe_detail_fragment.view.edt_ingredient
 import kotlinx.android.synthetic.main.recipe_detail_fragment.view.edt_name
 import kotlinx.android.synthetic.main.recipe_detail_fragment.view.edt_step
 import kotlinx.android.synthetic.main.recipe_detail_fragment.view.edt_time
-import kotlinx.android.synthetic.main.register_fragment.*
 import kotlinx.android.synthetic.main.register_fragment.edt_name
 
 class RecipeAddFragment : Fragment() {

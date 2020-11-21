@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-//import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.DBHelper.DBHelper
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User.User
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User.UserViewModel
 import kotlinx.android.synthetic.main.register_fragment.*

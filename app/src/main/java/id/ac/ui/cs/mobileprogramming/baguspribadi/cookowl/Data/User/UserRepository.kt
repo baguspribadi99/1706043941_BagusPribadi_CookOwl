@@ -1,8 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User
 
 import androidx.lifecycle.LiveData
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User.User
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User.UserDao
 
 class UserRepository(private val userDao: UserDao) {
 

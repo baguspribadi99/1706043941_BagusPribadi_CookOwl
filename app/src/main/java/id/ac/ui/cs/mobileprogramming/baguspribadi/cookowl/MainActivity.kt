@@ -1,6 +1,5 @@
 package id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl
 
-//import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.DBHelper.DBHelper
 import android.app.Activity
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -21,7 +20,6 @@ import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.Recipe
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Transaction.Transaction
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User.User
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Util.PrefUtil
-import kotlinx.android.synthetic.main.recipe_detail_fragment.*
 import java.io.File
 import java.util.*
 
@@ -133,12 +131,7 @@ class MainActivity : AppCompatActivity() {
 
         val fileProvider = FileProvider.getUriForFile(this, "id.ac.ui.cs.mobileprogramming.baguspribadi.fileprovider", picture)
         takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider)
-//        if(takePictureIntent.resolveActivity(this.packageManager) != null){
-            startActivityForResult(takePictureIntent, requestCode)
-//        }
-//        else{
-//            Toast.makeText(this, "No camera detected", Toast.LENGTH_SHORT).show()
-//        }
+        startActivityForResult(takePictureIntent, requestCode)
     }
 
     private fun getPicture(filename: String): File {

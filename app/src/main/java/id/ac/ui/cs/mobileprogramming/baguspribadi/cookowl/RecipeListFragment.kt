@@ -1,7 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -9,7 +8,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Adapter.RecipeListAdapter
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.Recipe
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.RecipeViewModel
 import kotlinx.android.synthetic.main.recipe_list_fragment.view.*
 

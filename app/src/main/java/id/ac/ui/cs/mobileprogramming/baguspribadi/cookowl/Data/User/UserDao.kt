@@ -5,7 +5,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User.User
 
 @Dao
 interface UserDao {

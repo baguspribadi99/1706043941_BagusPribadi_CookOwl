@@ -2,7 +2,6 @@ package id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Transaction
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
 
 @Entity(tableName="transaction_table")
 data class Transaction(

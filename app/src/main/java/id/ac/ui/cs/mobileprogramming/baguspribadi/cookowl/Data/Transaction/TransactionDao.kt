@@ -2,8 +2,6 @@ package id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Transaction
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.Recipe
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.User.User
 
 @Dao
 interface TransactionDao {

@@ -5,10 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Transaction.Transaction
-import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.MainActivity
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.R
 import kotlinx.android.synthetic.main.history_row_layout.view.*
-import kotlinx.android.synthetic.main.recipe_row_layout.view.*
 
 class TransactionListAdapter:RecyclerView.Adapter<TransactionListAdapter.MyViewHolder>(){
 
