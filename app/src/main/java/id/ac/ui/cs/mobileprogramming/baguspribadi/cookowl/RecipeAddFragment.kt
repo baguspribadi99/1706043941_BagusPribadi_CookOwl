@@ -72,9 +72,14 @@ class RecipeAddFragment : Fragment() {
             Log.i("path", picture.toString())
         }
 
-        val btnRegister = view.findViewById<Button>(R.id.submit)
-        btnRegister.setOnClickListener() {
+        val btnSubmit = view.findViewById<Button>(R.id.submit)
+        btnSubmit.setOnClickListener() {
             insertDataToDatabase()
+        }
+
+        val btnSuggest = view.findViewById<Button>(R.id.suggest)
+        btnSuggest.setOnClickListener() {
+            (context as MainActivity).loadFragment(RemoteRecipeListFragment.newInstance(), true)
         }
 
         return view

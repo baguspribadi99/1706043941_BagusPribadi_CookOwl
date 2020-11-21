@@ -7,6 +7,7 @@
     <string name="register">Register</string>
     <string name="lang">Language</string>
     <string name="submit">Submit</string>
+    <string name="suggestion">Suggestion</string>
     <string name="edit">Edit</string>
     <string name="create">Cook</string>
     <string name="delete">Delete</string>
