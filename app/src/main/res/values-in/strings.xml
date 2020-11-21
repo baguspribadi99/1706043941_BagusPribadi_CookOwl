@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="timer_desc">Timer ini dapat membantumu memasak</string>
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+    <string name="lang">Bahasa</string>
+    <string name="submit">Simpan</string>
+    <string name="edit">Ubah</string>
+    <string name="create">Buat</string>
+    <string name="delete">Hapus</string>
+    <string name="history">Riwayat</string>
+    <string name="finish">Selesai</string>
+    <string name="play">Mulai</string>
+    <string name="stop">Berhenti</string>
+    <string name="camera">Ambil Foto</string>
+    <string name="refresh_photo">Muat Ulang</string>
+    <string name="email">Email</string>
+    <string name="name">Nama</string>
+    <string name="password">Sandi</string>
+    <string name="time">Waktu</string>
+    <string name="minute">Menit</string>
+    <string name="step">Langkah</string>
+    <string name="ingredient">Bahan</string>
+    <string name="time_input">00 (menit)</string>
+</resources>

@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">CookOwl</string>
+    <string name="app_name" translatable="false">CookOwl</string>
+    <string name="timer_title" translatable="false">Happy Cooking!</string>
+
+    <string name="timer_desc">This is a timer to help you out</string>
+
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="lang">Language</string>
+    <string name="submit">Submit</string>
+    <string name="edit">Edit</string>
+    <string name="create">Create</string>
+    <string name="delete">Delete</string>
+    <string name="history">History</string>
+    <string name="finish">Finish</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="camera">Take Photo</string>
+    <string name="refresh_photo">Refresh</string>
+
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+
+    <string name="time">Time</string>
+    <string name="minute">Minute</string>
+    <string name="step">Step</string>
+    <string name="ingredient">Ingredient</string>
+
+    <string name="time_input">00 (minutes)</string>
+
 </resources>

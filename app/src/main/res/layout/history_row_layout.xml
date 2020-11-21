@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:id="@+id/txt_row_time"
+            android:textSize="20sp"
+            android:text="17 September 2020"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_row_status"
+            android:textSize="20sp"
+            android:text=":)"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_row_meal_name"
+        android:textSize="35sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="5dp"
+        android:text="Nasi Goreng Super Gila"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txt_row_chef_name"
+        android:textSize="30sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="5dp"
+        android:text="Haji Memashite"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
