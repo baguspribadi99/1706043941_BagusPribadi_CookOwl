@@ -3,6 +3,9 @@
     <string name="timer_title" translatable="false">Happy Cooking!</string>
     <string name="timer_desc">This is a timer to help you out</string>
 
+    <string name="permission_title" translatable="false">Permission Needed!</string>
+    <string name="permission_photo">App need to access photo for adding new recipe. Please grant permission.</string>
+
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="lang">Language</string>
@@ -17,6 +20,7 @@
     <string name="stop">Stop</string>
     <string name="camera">Take Photo</string>
     <string name="refresh_photo">Refresh</string>
+    <string name="ok">I understand!</string>
 
     <string name="email">Email</string>
     <string name="name">Name</string>

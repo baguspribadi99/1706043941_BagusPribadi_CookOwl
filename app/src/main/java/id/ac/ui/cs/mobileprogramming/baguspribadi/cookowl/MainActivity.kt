@@ -1,10 +1,12 @@
 package id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl
 
+import android.Manifest
 import android.app.Activity
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -14,6 +16,8 @@ import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.Recipe
@@ -32,12 +36,20 @@ class MainActivity : AppCompatActivity() {
     var language: String? = ""
     var pictureTaken: Bitmap? = null
 
+    private val READ_REQUEST_CODE = 101
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         loadLocale()
         setContentView(R.layout.activity_main)
 
-        loadFragment(LoginFragment.newInstance(), false)
+        if (ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.READ_EXTERNAL_STORAGE) !=
+            PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this@MainActivity, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), READ_REQUEST_CODE)
+        }
+        else {
+            loadFragment(LoginFragment.newInstance(), false)
+        }
     }
 
     fun loadFragment(fragment: Fragment, back: Boolean){
@@ -147,6 +159,12 @@ class MainActivity : AppCompatActivity() {
         picture = File(picturePath)
     }
 
+    fun restartApp() {
+        val intent = Intent(this, MainActivity::class.java)
+        this.startActivity(intent)
+        finishAffinity()
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode == requestCode && resultCode == Activity.RESULT_OK){
             val takenImage = BitmapFactory.decodeFile(picture.absolutePath)
@@ -154,6 +172,20 @@ class MainActivity : AppCompatActivity() {
         }
         else {
             super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        when (requestCode) {
+            READ_REQUEST_CODE -> {
+                if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this@MainActivity, "Permission Denied", Toast.LENGTH_SHORT).show()
+                    loadFragment(PermissionFragment.newInstance(), false)
+                } else {
+                    Toast.makeText(this@MainActivity, "Permission Granted", Toast.LENGTH_SHORT).show()
+                    loadFragment(LoginFragment.newInstance(), false)
+                }
+            }
         }
     }
 
