@@ -12,21 +12,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        
+        <receiver
+            android:name=".TimerNotificationActionReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="stop"/>
+                <action android:name="start"/>
+            </intent-filter>
+        </receiver>
+
         <provider
-            android:authorities="id.ac.ui.cs.mobileprogramming.baguspribadi.fileprovider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="id.ac.ui.cs.mobileprogramming.baguspribadi.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/fileprovider" />
         </provider>
-        
+
         <receiver
             android:name=".TimerExpiredReceiver"
             android:enabled="true"
-            android:exported="false"></receiver>
+            android:exported="false" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -164,7 +164,15 @@ class MainActivity : AppCompatActivity() {
         this.startActivity(intent)
         finishAffinity()
     }
-
+//BARU
+    fun removeAlarm(context: Context){
+        val intent = Intent(context, TimerExpiredReceiver::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmManager.cancel(pendingIntent)
+        PrefUtil.setAlarmSetTime(0, context)
+    }
+//BARU
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode == requestCode && resultCode == Activity.RESULT_OK){
             val takenImage = BitmapFactory.decodeFile(picture.absolutePath)

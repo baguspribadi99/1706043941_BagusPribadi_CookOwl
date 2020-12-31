@@ -15,6 +15,7 @@ import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Transaction.Trans
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.MainActivity.Companion.nowSeconds
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.MainActivity.Companion.removeAlarm
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.MainActivity.Companion.setAlarm
+import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Util.NotificationUtil
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Util.PrefUtil
 import kotlinx.android.synthetic.main.timer_fragment.*
 import java.lang.NumberFormatException
@@ -101,6 +102,7 @@ class TimerFragment : Fragment() {
         initTimer()
 
         removeAlarm((context as MainActivity))
+        NotificationUtil.hideTimerNotification(context as MainActivity)
     }
 
     override fun onPause() {
@@ -109,6 +111,7 @@ class TimerFragment : Fragment() {
         if (timerStarted){
             timer.cancel()
             val wakeUpTime = setAlarm((context as MainActivity), nowSeconds, timerSecondsRemaining)
+            NotificationUtil.showTimerRunning(context as MainActivity, wakeUpTime)
         }
 
         PrefUtil.setPreviousTimerLength(timerSeconds, (context as MainActivity))
