@@ -10,6 +10,8 @@ import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
@@ -19,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Recipe.Recipe
 import id.ac.ui.cs.mobileprogramming.baguspribadi.cookowl.Data.Transaction.Transaction
@@ -164,7 +167,7 @@ class MainActivity : AppCompatActivity() {
         this.startActivity(intent)
         finishAffinity()
     }
-//BARU
+
     fun removeAlarm(context: Context){
         val intent = Intent(context, TimerExpiredReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
@@ -172,7 +175,7 @@ class MainActivity : AppCompatActivity() {
         alarmManager.cancel(pendingIntent)
         PrefUtil.setAlarmSetTime(0, context)
     }
-//BARU
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode == requestCode && resultCode == Activity.RESULT_OK){
             val takenImage = BitmapFactory.decodeFile(picture.absolutePath)

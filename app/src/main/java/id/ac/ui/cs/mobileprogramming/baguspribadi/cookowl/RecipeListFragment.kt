@@ -39,6 +39,11 @@ class RecipeListFragment : Fragment() {
             (context as MainActivity).loadFragment(RecipeAddFragment.newInstance(), true)
         }
 
+        val btnPlayRipple = view.findViewById<FloatingActionButton>(R.id.play_ripple)
+        btnPlayRipple.setOnClickListener() {
+            (context as MainActivity).loadFragment(GlRippleFragment.newInstance(), true)
+        }
+
         setHasOptionsMenu(true)
 
         return view
