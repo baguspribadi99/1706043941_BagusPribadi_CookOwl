@@ -4,7 +4,9 @@
     <string name="timer_desc">This is a timer to help you out</string>
 
     <string name="permission_title" translatable="false">Permission Needed!</string>
-    <string name="permission_photo">App need to access photo for adding new recipe. Please grant permission.</string>
+    <string name="permission_camera">App need to access camera to take picture when adding new recipe.</string>
+    <string name="permission_photo">App need to access photo for adding new recipe.</string>
+    <string name="permission_request">Please grant permission.</string>
 
     <string name="login">Login</string>
     <string name="register">Register</string>

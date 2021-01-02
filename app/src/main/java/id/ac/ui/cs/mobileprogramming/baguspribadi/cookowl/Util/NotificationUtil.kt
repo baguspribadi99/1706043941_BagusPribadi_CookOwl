@@ -28,13 +28,11 @@ class NotificationUtil {
         fun showTimerExpired(context: Context){
             val startIntent = Intent(context, TimerNotificationActionReceiver::class.java)
             startIntent.action = AppConstant.ACTION_START
-            val startPendingIntent = PendingIntent.getBroadcast(context, 0, startIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
             val nBuilder = getBasicNotificationBuilder(context, CHANNEL_ID_TIMER, true)
             nBuilder.setContentTitle("Timer Expired")
                 .setContentText("Your meal is ready!")
                 .setContentIntent(getPendingIntentWithStack(context, MainActivity::class.java))
-//                .addAction(R.drawable.ic_play_arrow, "Done", startPendingIntent)
 
             val nManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             nManager.createNotificationChannel(CHANNEL_ID_TIMER, CHANNEL_NAME_TIMER, true)

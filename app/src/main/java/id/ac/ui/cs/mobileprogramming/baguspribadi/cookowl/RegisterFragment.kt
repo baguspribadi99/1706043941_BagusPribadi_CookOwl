@@ -27,7 +27,10 @@ class RegisterFragment : Fragment() {
 
         val btnRegister = view.findViewById<Button>(R.id.submit)
         btnRegister.setOnClickListener() {
-            insertDataToDatabase()
+            var isOnline = (context as MainActivity).isOnline()
+            if(isOnline){
+                insertDataToDatabase()
+            }
         }
         return view
     }

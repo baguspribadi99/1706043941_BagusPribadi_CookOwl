@@ -23,6 +23,8 @@
     <string name="step">Langkah</string>
     <string name="ingredient">Bahan</string>
     <string name="time_input">00 (menit)</string>
-    <string name="permission_photo">App memerlukan akses foto untuk menambahkan resep baru. Tolong berikan izin.</string>
+    <string name="permission_camera">App memerlukan akses foto untuk menambahkan resep baru.</string>
+    <string name="permission_photo">App memerlukan akses foto untuk menambahkan resep baru.</string>
+    <string name="permission_request">Tolong berikan izin.</string>
     <string name="ok">Saya mengerti!</string>
 </resources>

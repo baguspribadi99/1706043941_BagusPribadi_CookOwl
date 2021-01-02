@@ -24,7 +24,7 @@
         android:id="@+id/desc"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:text="@string/permission_photo"
+        android:text="@string/permission_camera"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,6 +33,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.252" />
+
+    <TextView
+        android:id="@+id/desc2"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:text="@string/permission_photo"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/desc3"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:text="@string/permission_request"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc2"
+        app:layout_constraintVertical_bias="0.105" />
 
     <Button
         android:id="@+id/ok"
@@ -44,7 +72,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/desc"
-        app:layout_constraintVertical_bias="0.343" />
+        app:layout_constraintTop_toBottomOf="@+id/desc3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
