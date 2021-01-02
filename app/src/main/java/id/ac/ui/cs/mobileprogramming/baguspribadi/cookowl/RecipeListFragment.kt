@@ -22,7 +22,7 @@ class RecipeListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.recipe_list_fragment, container, false)
 
-        view.greet.text = "Welcome " + (context as MainActivity).userLoggedIn!!.name.toString() + "!"
+        view.greet.text = helloWithJni((context as MainActivity).userLoggedIn!!.name.toString())
 
         val adapter = RecipeListAdapter()
         val recyclerView = view.list_all_recipe
@@ -60,8 +60,14 @@ class RecipeListFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
+    external fun helloWithJni(words: String): String
+
     companion object{
         @JvmStatic
         fun newInstance() = RecipeListFragment()
+
+        init {
+            System.loadLibrary("native-lib")
+        }
     }
 }
