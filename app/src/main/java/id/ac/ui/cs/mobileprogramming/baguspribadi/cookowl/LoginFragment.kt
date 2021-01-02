@@ -28,7 +28,10 @@ class LoginFragment : Fragment() {
 
         val btnLogin = view.findViewById<Button>(R.id.login)
         btnLogin.setOnClickListener() {
-            loginCheck()
+            var isOnline = (context as MainActivity).isOnline()
+            if(isOnline){
+                loginCheck()
+            }
         }
 
         val btnRegister = view.findViewById<Button>(R.id.register)

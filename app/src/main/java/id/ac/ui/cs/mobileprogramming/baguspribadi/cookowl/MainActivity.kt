@@ -12,6 +12,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
@@ -174,6 +175,18 @@ class MainActivity : AppCompatActivity() {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmManager.cancel(pendingIntent)
         PrefUtil.setAlarmSetTime(0, context)
+    }
+
+    fun isOnline(): Boolean {
+        var isOnline = false
+        val connectivityManager = this@MainActivity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (connectivityManager != null && connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork) != null) {
+            isOnline = true
+        }
+        else{
+            Toast.makeText(this@MainActivity, "No Network Detected!", Toast.LENGTH_SHORT).show()
+        }
+        return isOnline
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
